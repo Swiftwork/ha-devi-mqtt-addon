@@ -1,0 +1,34 @@
+name: DEVIreg2MQTT
+version: 1.0.6
+description: Home Assistant addon for DEVIreg Smart thermostats over MQTT
+slug: devireg2mqtt
+url: https://github.com/Swiftwork/hassio-devireg2mqtt
+boot: auto
+startup: application
+init: false
+timeout: 30
+services:
+  - mqtt:need
+panel_icon: mdi:thermostat
+panel_title: DEVIreg
+arch:
+  - aarch64
+  - amd64
+options:
+  devi: null
+  mqtt: null
+schema:
+  devi:
+    peerId: str
+    privateKey: str
+    houseName: str
+    rooms: 
+      - serialNumber: str
+        devicePeerID: str
+        name: str
+    userName: str
+  mqtt:
+    host: str
+    port: str
+    user: str
+    password: str

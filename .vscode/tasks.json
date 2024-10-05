@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "docker",
+      "args": [
+        "build",
+        "-t",
+        "devireg2mqtt:latest",
+        ".",
+      ]
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "problemMatcher": [],
+      "dependsOn": [
+        "build"
+      ],
+      "command": "docker",
+      "args": [
+        "run",
+        "-it",
+        "--rm",
+        "-v",
+        "${workspaceFolder}/options.json:/data/options.json",
+        "devireg2mqtt:latest"
+      ]
+    }
+  ]
+}
