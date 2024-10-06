@@ -3,6 +3,7 @@ FROM $BUILD_FROM
 
 # Copy root filesystem
 COPY rootfs /
+RUN chmod a+x /usr/bin/devireg2mqtt.sh
 
 # Setup base
 RUN set -eux; \
