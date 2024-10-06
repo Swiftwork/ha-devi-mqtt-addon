@@ -22,15 +22,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Get ha-devi-mqtt.jar
 RUN set -eux; \
+    mkdir /app; \
     wget -q https://github.com/igor-podpalchenko/ha-devi-mqtt/releases/download/v${BUILD_VERSION}/ha-devi-mqtt.jar \
-      -O /usr/bin/ha-devi-mqtt.jar
+      -O /app/ha-devi-mqtt.jar
 
 # Download and extract auto-discovery-templates
 RUN set -eux; \
-    wget -q https://github.com/igor-podpalchenko/ha-devi-mqtt/archive/main.zip -O temp.zip && \
-      mkdir -p /app/config/auto-discovery-templates && \
-      unzip -j temp.zip ha-devi-mqtt-main/auto-discovery-templates/* -d /app/config/auto-discovery-templates && \
-      rm temp.zip
+    mkdir -p /app/config/auto-discovery-templates; \
+    wget -q https://github.com/igor-podpalchenko/ha-devi-mqtt/archive/main.zip -O temp.zip; \
+    unzip -j temp.zip ha-devi-mqtt-main/auto-discovery-templates/* -d /app/config/auto-discovery-templates; \
+    rm temp.zip
 
 ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=$JAVA_HOME/bin:$PATH
