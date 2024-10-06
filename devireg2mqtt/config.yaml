@@ -42,4 +42,4 @@ schema:
     - serialNumber: str
       devicePeerID: str
       name: str
-image: ghcr.io/home-assistant/{arch}-hassio-devireg2mqtt
+image: ghcr.io/Swiftwork/{arch}-hassio-devireg2mqtt
