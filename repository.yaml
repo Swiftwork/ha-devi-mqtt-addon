@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: DEVIreg2MQTT Home Assistant add-on repository
+name: "Home Assistant Add-on: DEVIreg2MQTT"
 url: 'https://github.com/Swiftwork/hassio-devireg2mqtt'
 maintainer: Erik Hughes <erik.hughes@outlook.com>

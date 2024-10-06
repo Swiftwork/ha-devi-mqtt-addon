@@ -30,4 +30,4 @@ schema:
     port: str
     user: str
     password: str
-image: "ghcr.io/home-assistant/{arch}-hassio-devireg2mqtt"
+image: ghcr.io/home-assistant/{arch}-hassio-devireg2mqtt

@@ -33,13 +33,13 @@ RUN set -eux; \
     unzip -j temp.zip ha-devi-mqtt-main/auto-discovery-templates/* -d /app/config/auto-discovery-templates; \
     rm temp.zip
 
+# Default to UTF-8 file.encoding
+ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
+
+# Install Java
+ENV JAVA_VERSION=jdk-23+37
 ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=$JAVA_HOME/bin:$PATH
-
-# Default to UTF-8 file.encoding
-ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
-
-ENV JAVA_VERSION=jdk-23+37
 
 RUN set -eux; \
     ARCH="$(apk --print-arch)"; \
