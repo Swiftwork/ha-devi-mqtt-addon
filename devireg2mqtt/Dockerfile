@@ -9,7 +9,7 @@ RUN set -eux; \
     apk add --no-cache \
       jq=1.7.1-r0 \
       dos2unix=7.5.2-r0 \
-      wget=1.24.5-r0
+      wget=1.24.5-r0 \
     ; \
     rm -rf /var/cache/apk/*
 
