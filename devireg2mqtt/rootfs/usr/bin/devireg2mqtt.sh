@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#!/bin/bash
 
 # Read options.json and split into config.json and mqtt.json
 jq '.devi' /data/options.json > /app/config/devi_config.json
