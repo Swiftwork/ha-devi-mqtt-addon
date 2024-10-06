@@ -14,7 +14,7 @@ arch:
   - amd64
 options:
   mqtt:
-    host: mqtt://core-mosquitto
+    host: core-mosquitto
     port: 1883
     user: mqtt
     password: null

@@ -30,7 +30,7 @@ profile devireg2mqtt flags=(attach_disconnected,mediate_deleted) {
   # Start new profile for service
   /usr/bin/devireg2mqtt cx -> devireg2mqtt_service,
 
-  profile devireg2mqtt_service flags=(attach_disconnected,mediate_deleted) {
+  profile devireg2mqtt_service flags=(complain,attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay
