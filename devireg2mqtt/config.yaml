@@ -13,21 +13,33 @@ arch:
   - aarch64
   - amd64
 options:
-  devi: null
-  mqtt: null
-schema:
+  mqtt:
+    host: mqtt://core-mosquitto
+    port: 1883
+    user: mqtt
+    password: null
   devi:
-    peerId: str
-    privateKey: str
-    houseName: str
-    rooms:
-      - serialNumber: str
-        devicePeerID: str
-        name: str
-    userName: str
+    peerId: null
+    privateKey: null
+    houseName: Home
+    userName: null
+  devi_rooms:
+    - serialNumber: null
+      devicePeerID: null
+      name: null
+schema:
   mqtt:
     host: str
-    port: str
+    port: port
     user: str
-    password: str
+    password: password
+  devi:
+    peerId: str
+    privateKey: password
+    houseName: str
+    userName: str
+  devi_rooms:
+    - serialNumber: str
+      devicePeerID: str
+      name: str
 image: ghcr.io/home-assistant/{arch}-hassio-devireg2mqtt

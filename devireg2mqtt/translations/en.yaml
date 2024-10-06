@@ -1,0 +1,12 @@
+configuration:
+  mqtt:
+    name: MQTT Settings
+    description: Configure the MQTT connection settings.
+  devi:
+    name: DEVIreg Settings
+    description: Configure the DEVIreg connection settings.
+  devi_rooms:
+    name: DEVIreg Rooms
+    description: |
+      Configure the DEVIreg rooms and devices.
+      Separated due to home assistant not allowing nested lists.
